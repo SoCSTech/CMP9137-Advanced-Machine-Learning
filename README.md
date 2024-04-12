@@ -8,8 +8,8 @@ You can use this repository use any version of Tensorflow on the lab machines, o
 
 ## How to Use
 
-1. Open the 'Docker Desktop' application. Once it has launched you may minimise the window.
-2. Click the green 'Code' button and download as a zip.
+1. Click the green 'Code' button on this page and download as a zip.
+2. Open the 'Docker Desktop' application. Once it has launched you may minimise the window.
 3. Extract that zip file to your desktop.
 4. Open the  `C:\Users\Computing\Desktop\CMP9137-main` directory in File Explorer.
 5. *By default*, this container runs Tensorflow version 2.10.0. If you require a different version, open the `.devcontainer` folder, right click the `devcontainer.json` file, click 'Edit in Notepad', and locate line 5: `"image": "tensorflow/tensorflow:2.10.0-gpu",`. This line may be edited to a different Tensorflow version. For example, you may change it to: `"image": "tensorflow/tensorflow:2.15.0-gpu",`. Different versions of tensorflow, with their corresponding preferred CUDA versions can be found at [www.tensorflow.org/install/source#gpu](https://www.tensorflow.org/install/source#gpu).
