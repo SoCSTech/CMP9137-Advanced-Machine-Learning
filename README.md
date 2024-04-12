@@ -2,41 +2,23 @@
 
 A template repository for teaching Tensorflow
 
-## Use case
+## Use Case
 
-You can use this repository to start developing with Tensorflow. It provides a preconfigured [Development Container](https://containers.dev/) with Tensorflow installed.
+You can use this repository use any version of Tensorflow on the lab machines, or at home.
 
-## Usage
+## How to Use
 
-This is a repository template, ready for you to either *fork* it (being able to pull in changes that happen in this repository later, recommended) or *use this template* to create your own independent repository.
-
-### Option 1: How to *fork* (recommended)
-
-Go to https://github.com/SoCSTech/CMP9137 and click on 
-
-![Fork](.assets/fork.png) 
-
-to create a GitHub Fork in your own GitHub account. Then continue to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository on your computer. Learn more about GitHub Forks [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
-
-### Option 2: How to *use as template*
-
-Go to https://github.com/SoCSTech/CMP9137 and click on 
-
-![usetemplate](.assets/usetemplate.png)
-
-to create a new repository in your own GitHub account. Then continue to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository on your computer. *Note: This repository is detached from the original one, so any changes in https://github.com/SoCSTech/CMP9137 happening after you created your own repository will have to be manually added.
-
-
-### Setup your working environment
-
-1. Make sure you have VSCode installed: https://code.visualstudio.com/download
-2. Make sure you have the `Docker` and the `Dev Containers` extension in VSCode installed and working: https://code.visualstudio.com/docs/containers/overview and https://code.visualstudio.com/docs/devcontainers/containers
-    * ensure docker is working, i.e. try `docker run --rm hello-world` and check it succeeds for your user
-3. The docker image used to provide the Development Container is provided by the Docker Container Registry. You do not need to log in to use it.
-
-### Open in VSCode
-
-1. Open your own repository (*forked* or generated from this template) in VSCode: https://code.visualstudio.com/docs/sourcecontrol/intro-to-git (or any other way you prefer), e.g. click on "Clone Respository" in VSCode:
-    ![Alt text](.assets/clone.png)
-
-2. VSCode should prompt you that there is a devcontainer configured and ask if you want to reopen in container. Re-open in the container
+1. Click the green 'Code' button and download as a zip.
+2. Extract the zip file to the desktop.
+3. Open the 'Docker Desktop' application. Once it has launched you may minimise the window.
+4. Go to the C:\Users\Computing\Desktop\CMP9137-main directory in File Explorer.
+5. By default, this container runs Tensorflow version 2.10.0. If you require a different version, open the .devcontainer folder, right click the devcontainer.json file, click 'Edit in Notepad', and locate line 5: '"image": "tensorflow/tensorflow:2.10.0-gpu",'. This line may be edited to a different Tensorflow version. For example, you may change it to: '"image": "tensorflow/tensorflow:2.15.0-gpu",'. Different versions of tensorflow, with their corresponding preferred CUDA versions can be found at www.tensorflow.org/install/source#gpu.
+6. Right click in any blank space in the File Explorer window, and click 'Open in Terminal'
+7. In the terminal, type 'code .' and press enter.
+8. Visual Studio Code will then launch. Click the blue 'Reopen in Container' button that pops up in the bottom right hand corner of the window.
+9. If you do not see the pop up, press F1 and type 'Reopen in container'. Click the 'Dev Containers: Reopen in Container' option that appears in the top search bar.
+10. If you are working from home, you will need to install the Dev Containers Extension in VS Code to open in container: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+11. The container will now launch and will take a few minutes. You will eventually see a prompt in the terminal at the bottom of the window to press any key to close.
+12. The docker container is now active. You may move any python tensorflow code you wish to run into the C:\Users\Computing\Desktop\CMP9137-main.
+13. Run python files by opening a new terminal using Ctrl+Shift+' and typing python3 "YOUR_FILENAME.py". There is a test file already in the folder which you can run to verify the Tensorflow version and whether the GPU is being used.
+14. If you have any questions about how to use this docker container, please don't hesitate to ask your module coordinator, or SoCS Technicians at help@socstech.support.
