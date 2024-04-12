@@ -4,7 +4,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
-print(tf.__version__)
+print("Tensorflow Version: ", tf.__version__)
 # Model / data parameters
 num_classes = 10
 input_shape = (28, 28, 1)
