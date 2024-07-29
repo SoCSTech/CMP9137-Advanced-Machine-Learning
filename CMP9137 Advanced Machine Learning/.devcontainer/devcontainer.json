@@ -2,7 +2,7 @@
 {
   "name": "SoCS-Tensorflow",
   // You can find other versions of tensorflow at: https://www.tensorflow.org/install/source#gpu
-  "image": "tensorflow/tensorflow:2.10.0-gpu",
+  "image": "tensorflow/tensorflow:2.17.0-gpu",
   "runArgs": ["--gpus=all"],
   "remoteEnv": {
     "PATH": "${containerEnv:PATH}:/usr/local/cuda/bin",
