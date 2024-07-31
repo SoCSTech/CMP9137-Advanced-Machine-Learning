@@ -1,24 +1,49 @@
-# CMP9137 - Advanced Machine Learning Devcontainer
+# CMP9137 Advanced Machine Learning
+This repository houses the devcontainer and docker image for the Advanced Machine Learning module at the University of Lincoln.
 
-A template repository for teaching Tensorflow
+By default, this container runs Tensorflow version 2.10.0. If you require a different version, open the `.devcontainer` folder, right click the `devcontainer.json` file, click 'Edit in Notepad', and locate line 5: `"image": "tensorflow/tensorflow:2.17.0-gpu",`. This line may be edited to a different Tensorflow version. For example, you may change it to: `"image": "tensorflow/tensorflow:2.15.0-gpu",`. Different versions of tensorflow, with their corresponding preferred CUDA versions can be found at [www.tensorflow.org/install/source#gpu](https://www.tensorflow.org/install/source#gpu).
 
-## Use Case
+## What is Docker?
+Docker is a platform which allows developers to create and share containers.
 
-You can use this repository use any version of Tensorflow on the lab machines, or at home.
+A container is an environment separate from your main operating system, which includes all of the requirements to run a piece of software. You can think of it like a box which you can take anywhere,
+and when opened, the software inside works exactly the same way, no matter where you are running it.
 
-## How to Use
+This helps us technicians to give every module the exact coding environment it needs, without causing any conflicts.
 
-1. Click the green 'Code' button on this page and download as a zip.
-2. Open the 'Docker Desktop' application. Once it has launched you may minimise the window.
-3. Extract that zip file to your desktop.
-4. Open the  `C:\Users\Computing\Desktop\CMP9137-main` directory in File Explorer.
-5. *By default*, this container runs Tensorflow version 2.10.0. If you require a different version, open the `.devcontainer` folder, right click the `devcontainer.json` file, click 'Edit in Notepad', and locate line 5: `"image": "tensorflow/tensorflow:2.17.0-gpu",`. This line may be edited to a different Tensorflow version. For example, you may change it to: `"image": "tensorflow/tensorflow:2.15.0-gpu",`. Different versions of tensorflow, with their corresponding preferred CUDA versions can be found at [www.tensorflow.org/install/source#gpu](https://www.tensorflow.org/install/source#gpu).
-6. Right click in any blank space in the File Explorer window, and click 'Open in Terminal'
-7. In the terminal, type `code .` and press enter.
-8. Visual Studio Code will then launch. Click the blue 'Reopen in Container' button that pops up in the bottom right hand corner of the window.
-9. *If you do not see the pop up*, press <kbd>F1</kbd> and type `Reopen in container`. Click the 'Dev Containers: Reopen in Container' option that appears in the top search bar.
-10. If you are working from home, you will need to install the [Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in VS Code to open in the container.
-11. The container will now launch and will take a few minutes. You will eventually see a prompt in the terminal at the bottom of the window to press any key to close.
-12. The docker container is now active. You may move any python tensorflow code you wish to run into the `C:\Users\Computing\Desktop\CMP9137-main` folder.
-13. Run python files by opening a new terminal using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>'</kbd> and typing `python3 YOUR_FILENAME.py`. There is a test file already in the folder which you can run to verify the Tensorflow version and whether the GPU is being used.
-14. If you have any questions about how to use this docker container, please don't hesitate to ask your module coordinator, or SoCS Technicians at [help@socstech.support](mailto:help@socstech.support).
+If you would like to learn more about how Docker works in your labs, please feel free to contact us at technician@lincoln.ac.uk.
+
+## How do I use the Docker container for this module at home?
+
+We strongly recommend using the Docker container for your modules on your personal devices, as it recreates the exact coding environment you use in the labs without installing lots of stuff on your computer which may conflict with the required software for other modules you are studying.
+
+### Prerequisites
+
+These prerequisites are the same for every Computer Science module using Docker containers, so you should only need to do this once and it will work for the rest of your degree.
+
+1. Download and install Docker Desktop: https://www.docker.com/products/docker-desktop/
+
+2. Download and install VSCode: https://code.visualstudio.com/
+
+3. Install the Remote Development extension for VSCode: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+
+### Process
+
+1. Clone this repository to your computer by clicking the green 'Code' button, and clicking 'Download ZIP'.
+2. Extract the downloaded Zip file.
+3. Inside the extracted folder is a folder entitled 'CMP9137 Advanced Machine Learning' which contains the .devcontainer folder. Move 'CMP9137 Advanced Machine Learning' to wherever you like, this will be your working directory for this module.
+4. Make sure Docker Desktop is running. You can minimise the window.
+5. Open VS Code, go to File -> Open Folder, and select your 'CMP9137 Advanced Machine Learning' folder.
+6. Click the 'Reopen in container' pop up in the bottom right corner of your VS Code window. If you do not see this pop up, press F1, and type 'Reopen in Container', and click on the 'Dev Containers: Reopen in Container' command.
+7. The Docker image will now be downloaded, and the container will be started. You can click 'show log' in the bottom right corner to see what is going on.
+8. Your docker container is now running! Within this VS Code window, you can now run workshop or assignment material exactly the same as in the computing labs.
+9. If we ever push an update to the container, you will need to go to Docker Desktop -> Images, find ghcr.io/socstech/cmp9137, click the ... button, and click pull. This will pull the most recent version of the docker container. There should be Blackboard announcements letting you know if you ever need to do this, but it is good to do this step every time before you want to use the container.
+
+### Troubleshooting
+
+If you are struggling to get this to work, try these common troubleshooting steps:
+
+1. Restart your computer. Always a good start.
+2. Make sure Docker Desktop is open and running.
+3. Make sure Docker Desktop is updated.
+4. Make sure VS Code has the Remote Development extension pack. You can install this through the Extensions tab in VS Code if it isn't working through the web link above.
