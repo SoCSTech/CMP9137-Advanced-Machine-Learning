@@ -1,8 +1,5 @@
-# CMP9137 Advanced Machine Learning
-This repository houses the devcontainer and docker image for the Advanced Machine Learning module at the University of Lincoln.
-
-By default, this container runs Tensorflow version 2.10.0. If you require a different version, open the `.devcontainer` folder, right click the `devcontainer.json` file, click 'Edit in Notepad', and locate line 5: `"image": "tensorflow/tensorflow:2.17.0-gpu",`. This line may be edited to a different Tensorflow version. For example, you may change it to: `"image": "tensorflow/tensorflow:2.15.0-gpu",`. Different versions of tensorflow, with their corresponding preferred CUDA versions can be found at [www.tensorflow.org/install/source#gpu](https://www.tensorflow.org/install/source#gpu).
-
+# CMP2028 Advanced Machine Learning
+This repository houses the devcontainer and docker image for the CMP9137 module at the University of Lincoln.
 ## What is Docker?
 Docker is a platform which allows developers to create and share containers.
 
@@ -33,7 +30,7 @@ These prerequisites are the same for every Computer Science module using Docker 
 2. Extract the downloaded Zip file.
 3. Inside the extracted folder is a folder entitled 'CMP9137 Advanced Machine Learning' which contains the .devcontainer folder. Move 'CMP9137 Advanced Machine Learning' to wherever you like, this will be your working directory for this module.
 4. Make sure Docker Desktop is running. You can minimise the window.
-5. Open VS Code, go to File -> Open Folder, and select your 'CMP9137 Advanced Machine Learning' folder.
+5. Open VS Code, go to File -> Open Folder, and select your 'CMP9137 Advanced Machine Learning folder.
 6. Click the 'Reopen in container' pop up in the bottom right corner of your VS Code window. If you do not see this pop up, press F1, and type 'Reopen in Container', and click on the 'Dev Containers: Reopen in Container' command.
 7. The Docker image will now be downloaded, and the container will be started. You can click 'show log' in the bottom right corner to see what is going on.
 8. Your docker container is now running! Within this VS Code window, you can now run workshop or assignment material exactly the same as in the computing labs.

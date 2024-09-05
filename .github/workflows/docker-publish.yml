@@ -67,8 +67,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@96383f45573cb7f253c731d3b3ab81c87ef81934 # v5.0.0
         with:
-          # THIS MUST BE CHANGED
-          images: ghcr.io/socstech/cmp9137
+          images: ghcr.io/socstech/cmp9137 # THIS LINE MUST BE EDITED FOR NEW MODULES
 
 
       # Build and push Docker image with Buildx (don't push on PR)
@@ -78,10 +77,9 @@ jobs:
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
           context: .
-          # THIS MUST BE CHANGED
-          file: ./CMP9137 Advanced Machine Learning/.devcontainer/Dockerfile
+          file: ./CMP2028 Advanced Machine Learning/.devcontainer/Dockerfile # THIS LINE MUST BE EDITED FOR NEW MODULES
           push: ${{ github.event_name != 'pull_request' }}
-          # TAGS MUST BE CHANGED
+          # THIS LINE MUST BE EDITED FOR NEW MODULES
           tags: |
             ${{ steps.meta.outputs.tags }}
             ghcr.io/socstech/cmp9137:latest
