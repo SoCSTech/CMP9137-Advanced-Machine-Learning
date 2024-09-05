@@ -1,4 +1,4 @@
-# CMP2028 Advanced Machine Learning
+# CMP9137 Advanced Machine Learning
 This repository houses the devcontainer and docker image for the CMP9137 module at the University of Lincoln.
 ## What is Docker?
 Docker is a platform which allows developers to create and share containers.
