@@ -1,10 +1,10 @@
 {
     "name": "Advanced Machine Learning",
     
-    "image": "ghcr.io/socstech/cmp9137:latest",
-    "runArgs": ["--gpus=all"],
+    // "image": "ghcr.io/socstech/cmp9137:latest",
+    // "runArgs": ["--gpus=all"],
 
-    //"build": { "dockerfile": "Dockerfile" },
+    "build": { "dockerfile": "Dockerfile" },
 
     "customizations": {
         "vscode": {
